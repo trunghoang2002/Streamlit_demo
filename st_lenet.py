@@ -15,7 +15,7 @@ uploaded_file = st.file_uploader("Upload an image to predict...", type="jpg")
 
 if uploaded_file is not None:
     files = {"file": uploaded_file}
-    content = await file.read()
+    content = file.read()
     image = Image.open(io.BytesIO(content)).convert("L")  # Convert to grayscale
     image = image.resize((28, 28))
     image_array = np.array(image).reshape((1, 28, 28, 1)).astype("float32") / 255
