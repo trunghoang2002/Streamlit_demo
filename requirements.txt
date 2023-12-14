@@ -3,4 +3,4 @@ uvicorn
 python-multipart
 streamlit
 tensorflow
-request
+requests
